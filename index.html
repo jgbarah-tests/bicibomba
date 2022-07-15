@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+
+  </head>
+  <body>
+    <a-scene>
+
+        <a-assets>
+            <a-asset-item id="funcionamiento" src="modelo/bicibomba.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity position="0 0 0" gltf-model="#funcionamiento"
+                scale="1 1 1" animation-mixer>
+        </a-entity>
+        <a-sky src="sky2.jpg"></a-sky>
+
+	<a-plane position="-7 0 0" width="10" height="10"
+		 rotation="-90 0 0"
+		 src="modelo/mud_cracked_dry_riverbed_002_diff_4k_png.png">
+	</a-plane>
+	<a-plane position="7 0 0" width="10" height="10"
+		 rotation="-90 0 0"
+		 src="modelo/mud_cracked_dry_riverbed_002_diff_4k_png.png">
+	</a-plane>
+	<a-plane position="0 0 3" width="10" height="4"
+		 rotation="-90 0 0"
+		 src="modelo/mud_cracked_dry_riverbed_002_diff_4k_png.png">
+	</a-plane>
+	<a-plane position="0 0 -3" width="10" height="4"
+		 rotation="-90 0 0"
+		 src="modelo/mud_cracked_dry_riverbed_002_diff_4k_png.png">
+	</a-plane>
+
+	<a-entity
+	  geometry="primitive: box; height: 1; width:24; depth: 0.1"
+	  position="0 0.5 -5"
+	  material="opacity: 0.5; transparent: true">
+	</a-entity>
+	<a-entity
+	  geometry="primitive: box; height: 1; width:24; depth: 0.1"
+	  position="0 0.5 5"
+	  material="opacity: 0.5; transparent: true">
+	</a-entity>
+	<a-entity
+	  geometry="primitive: box; height: 1; width:10; depth: 0.1"
+	  rotation="0 90 0"
+	  position="-12 0.5 0"
+	  material="opacity: 0.5; transparent: true">
+	</a-entity>
+	<a-entity
+	  geometry="primitive: box; height: 1; width:10; depth: 0.1"
+	  rotation="0 90 0"
+	  position="12 0.5 0"
+	  material="opacity: 0.5; transparent: true">
+	</a-entity>
+
+	<a-entity movement-controls="fly: false" position="0 0 3">
+	  <a-entity camera position="0 1.6 0" look-controls></a-entity>
+	</a-entity>
+
+    </a-scene>
+  </body>
+</html>
