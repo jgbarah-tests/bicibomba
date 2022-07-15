@@ -3,12 +3,11 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
-
   </head>
   <body>
     <a-scene>
 
-        <a-assets>
+        <a-assets timeout="3000">
             <a-asset-item id="funcionamiento" src="modelo/bicibomba.gltf"></a-asset-item>
         </a-assets>
         <a-entity position="0 0 0" gltf-model="#funcionamiento"
