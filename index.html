@@ -9,7 +9,15 @@
 
         <a-assets timeout="10000">
             <a-asset-item id="funcionamiento" src="modelo/bicibomba.gltf"></a-asset-item>
+            <a-asset-item id="montaje" src="ensamblaje.glb"></a-asset-item>
         </a-assets>
+
+	<a-entity position="-3 0.01 0" gltf-model="#montaje"
+                  scale="1 1 1"
+		  animation-mixer="clip: *; loop: pingpong; timescale: 10">
+        </a-entity>
+
+	
         <a-entity position="0 0 0" gltf-model="#funcionamiento"
                 scale="1 1 1" animation-mixer>
         </a-entity>
